@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>定时任务日志</title>
+<#include "/header.html">
+</head>
+<body class="datatables-editor-page" data-spy="scroll" data-target="#nav-spy" data-offset="300">
+<div id="rrapp">
+
+	<section id="content" class="table-layout animated fadeIn">
+			<div class="row">
+				<div class="panel panel-visible">
+					<div class="panel-heading">
+						<div class="panel-title hidden-xs">
+							<span class="glyphicon glyphicon-tasks"></span>任务日志列表
+						</div>
+					</div>
+					<div class="panel-body pn">
+						<div id="example4_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+							<div class="dt-panelmenu clearfix">
+								<div class="DTTT btn-group">
+									<a class="btn btn-default light btn-sm DTTT_button_text" style="float:right;" @click="back">返回</a>
+								</div>
+								<div class="dataTables_filter">
+									<input type="text" class="form-control input-sm" v-model="q.jobId" @keyup.enter="query" placeholder="请输入任务ID">
+									<a class="btn btn-default light btn-sm DTTT_button_text" @click="query"><span>搜索</span></a>
+								</div>
+							</div>
+							<table id="jqGrid" cellspacing="0" cellpadding="0" class="table fchild-checkbox dataTable no-footer DTTT_selectable"></table>
+	    					<div id="jqGridPager"></div>
+	    					
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/job/schedule_log.js?_${.now?long}"></script>
+</body>
+</html>
