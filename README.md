@@ -2,7 +2,7 @@
 
 参考[人人开源](http://www.renren.io/open/)、[Apache shiro安全系统 【SB】](http://www.sojson.com)（*可以稍许参考但是操作redis相关session的代码实在写的太烂,看完特别想骂人，然后其中VCache那个只是用来记录当前在线用户的跟jedisManager其实是一个东西，用两个对象分别去存取*）安全框架等不同开源工程整理的一套“轮子”工程，方便初始开发阶段使用
 
-修改是基于mileworks-gen的SpringBoot版，方便SpringBoot开发者使用，该版本要求JDK1.8, 逐渐会慢慢有Lambda写法
+mileworks-gen是基于SpringBoot，方便SpringBoot开发者使用，该版本要求JDK1.8, 逐渐会慢慢有Lambda写法
 
 <br> 
 
