@@ -1,8 +1,8 @@
 **项目说明** 
 
-参考[人人开源](http://www.renren.io/open/)、[Apache shiro安全系统 sb](http://www.sojson.com)（*可以稍许参考但是操作redis相关session的代码实在写的太烂,看完特别想骂人，然后其中VCache那个只是用来记录当前在线用户的跟jedisManager其实是一个东西，用两个对象分别去存取*）安全框架等不同开源工程整理的一套“轮子”工程，方便初始开发阶段使用
+参考[人人开源](http://www.renren.io/open/)、[Apache shiro安全系统 【SB】](http://www.sojson.com)（*可以稍许参考但是操作redis相关session的代码实在写的太烂,看完特别想骂人，然后其中VCache那个只是用来记录当前在线用户的跟jedisManager其实是一个东西，用两个对象分别去存取*）安全框架等不同开源工程整理的一套“轮子”工程，方便初始开发阶段使用
 
-修改是基于renren-security的SpringBoot版，方便SpringBoot开发者使用，该版本要求JDK1.8, 逐渐会慢慢有Lambda写法
+修改是基于mileworks-gen的SpringBoot版，方便SpringBoot开发者使用，该版本要求JDK1.8, 逐渐会慢慢有Lambda写法
 
 <br> 
 
@@ -44,7 +44,7 @@
 
 **项目结构** 
 ```
-renren-security
+MileWorks-GEN
 ├─doc  项目SQL语句
 ├─common  公共
 ├─config  配置文件
@@ -53,7 +53,7 @@ renren-security
 │  ├─job 定时任务
 │  ├─oss 文件存储
 │  └─sys 系统管理(核心)
-├─RenrenApplication.java 项目启动类
+├─MileWorksGenApplication.java 项目启动类
 │ 
 ├─resources 
 │  ├─mapper     SQL文件
@@ -79,20 +79,20 @@ renren-security
 
  **本地部署**
 - 通过git下载源码
-- 创建数据库renren_security，数据库编码为UTF-8
+- 创建数据库mileworks_gen，数据库编码为UTF-8
 - 执行doc/db.sql文件，初始化数据【按需导入表结构及数据】
 - 修改application-dev.yml，更新MySQL账号和密码
 - Eclipse、IDEA运行RenrenApplication.java，则可启动项目
-- 项目访问路径：http://localhost:8080/renren-security
+- 项目访问路径：http://localhost:8080/mileworks_gen
 - 账号密码：admin/admin
-- swagger文档路径：http://localhost:8080/renren-security/swagger/index.html
+- swagger文档路径：http://localhost:8080/mileworks_gen/swagger/index.html
 
 <br>
 
  **分布式部署**
 - 分布式部署，需要安装redis，并配置application.yml里的redis信息
-- 需要配置【renren.redis.open=true】，表示开启redis缓存
-- 需要配置【renren.shiro.redis=true】，表示把shiro session存到redis里
+- 需要配置【mileworks.redis.open=true】，表示开启redis缓存
+- 需要配置【mileworks.shiro.redis=true】，表示把shiro session存到redis里
 
 <br>
 
