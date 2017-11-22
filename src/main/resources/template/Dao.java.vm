@@ -2,6 +2,7 @@ package ${package}.dao;
 
 import ${package}.entity.${className}Entity;
 import org.apache.ibatis.annotations.Mapper;
+import com.mileworks.modules.sys.dao.BaseDao;
 
 /**
  * ${comments}

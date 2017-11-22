@@ -2,11 +2,9 @@
 <html>
 <head>
 <title>定时任务日志</title>
-<#include "/header.html">
 </head>
 <body class="datatables-editor-page" data-spy="scroll" data-target="#nav-spy" data-offset="300">
-<div id="rrapp">
-
+<div id="rrapp" v-cloak>
 	<section id="content" class="table-layout animated fadeIn">
 			<div class="row">
 				<div class="panel panel-visible">
@@ -36,6 +34,7 @@
 		</section>
 </div>
 
+<#include "/inc.html">
 <script src="${request.contextPath}/statics/js/modules/job/schedule_log.js?_${.now?long}"></script>
 </body>
 </html>

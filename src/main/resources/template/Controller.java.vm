@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import ${package}.entity.${className}Entity;
-import ${package}.service.${className}Service;
-import ${package}.utils.PageUtils;
-import ${package}.utils.Query;
-import ${package}.utils.R;
+import ${package}.modules.gen.entity.${className}Entity;
+import ${package}.modules.gen.service.${className}Service;
+import ${package}.common.utils.PageUtils;
+import ${package}.common.utils.Query;
+import ${package}.common.utils.R;
 
 
 /**
