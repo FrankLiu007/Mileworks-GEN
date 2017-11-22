@@ -5,3 +5,4 @@ VOLUME /tmp
 ADD mileworks-gen.jar /app.jar
 RUN bash -c 'touch /app.jar'
 ENTRYPOINT ["java","-jar","/app.jar"]
+
