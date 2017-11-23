@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <title>${comments}</title>
+#set($header='<#include  "/inc.html">')
 #set($save='<#if shiro.hasPermission("'+${pathName}+':save")>')
 #set($update='<#if shiro.hasPermission("'+${pathName}+':update")>')
 #set($delete='<#if shiro.hasPermission("'+${pathName}+':delete")>')
 #set($end='</#if>')
-$header
 </head>
 <body class="datatables-editor-page" data-spy="scroll" data-target="#nav-spy" data-offset="300">
 <div id="rrapp" v-cloak>
@@ -31,10 +32,6 @@ $header
 									$delete
 						            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
 									$end
-								</div>
-								<div class="dataTables_filter">
-									<input type="text" class="form-control input-sm" v-model="q.beanName" @keyup.enter="query" placeholder="请输入bean名称">
-									<a class="btn btn-default light btn-sm DTTT_button_text" @click="query"><span>搜索</span></a>
 								</div>
 							</div>
 							<table id="jqGrid" cellspacing="0" cellpadding="0" class="table fchild-checkbox dataTable no-footer DTTT_selectable"></table>
@@ -75,7 +72,7 @@ $header
 		</section>
 </div>
 
-#set($header='<#include "/inc.html">')
+$header
 <script src="${request.contextPath}/statics/js/modules/generator/${pathName}.js?_${.now?long}"></script>
 </body>
 </html>
