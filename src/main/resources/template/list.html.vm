@@ -24,13 +24,13 @@
 							<div class="dt-panelmenu clearfix">
 								<div class="DTTT btn-group">
 									$save
-						            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+						            <a class="btn btn-default light btn-sm DTTT_button_text" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
 									$end
 									$update
-						            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+						            <a class="btn btn-default light btn-sm DTTT_button_text" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
 									$end
 									$delete
-						            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+						            <a class="btn btn-default light btn-sm DTTT_button_text" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
 									$end
 								</div>
 							</div>
