@@ -81,7 +81,6 @@ var vm = new Vue({
 		this.getUser();
 	},
 	updated: function(){
-		//路由
 		var router = new Router();
 		routerList(router, vm.menuList);
 		router.start();
@@ -97,10 +96,10 @@ function routerList(router, menuList){
 			routerList(router, menu.list);
 		}else if(menu.type == 1){
 			router.add('#'+menu.url, function() {
-				var url = window.location.hash;
+				var url = window.location.hash.replace('#', '');
 				
 				//替换iframe的url
-			    vm.main = url.replace('#', '');
+			    vm.main = url ;
 			    
 			    //导航菜单展开
 			    $(".treeview-menu li").removeClass("active");

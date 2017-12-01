@@ -49,9 +49,18 @@
 	 */
 	Router.prototype.go = function(addr) {
 		var self = this;
-
 		window.location.hash = '#' + self.key + addr;
 	};
+	
+	/**
+	 * 重定向
+	 */
+	Router.prototype.forward = function(addr) {
+		var self = this;
+		
+		window.location.hash = '#' + self.key + addr;
+		window.location.href =  addr ;
+	}
 
 	/**
 	 * 重载页面
@@ -60,7 +69,6 @@
 		var self = this;
 
 		var hash = window.location.hash.replace('#' + self.key, '');
-		//var addr = hash.split('/')[0];
 		var addr = hash;
 		var cb = getCb(addr, self.hashList);
 		if(cb != false) {
