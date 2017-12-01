@@ -18,6 +18,7 @@ var vm = new Vue({
     data:{
         showList: true,
         title: null,
+        rurl : baseURL + "#modules/sys/role.html" ,
         menu:{
             parentName:null,
             parentId:0,
@@ -37,10 +38,14 @@ var vm = new Vue({
             })
         },
         add: function(){
-            vm.showList = false;
-            vm.title = "新增";
-            vm.menu = {parentName:null,parentId:0,type:1,orderNum:0};
-            vm.getMenu();
+//            vm.showList = false;
+//            vm.title = "新增";
+//            vm.menu = {parentName:null,parentId:0,type:1,orderNum:0};
+//            vm.getMenu();
+        	
+        	var router = new Router();
+        	router.forward(vm.rurl);
+        	
         },
         update: function () {
             var menuId = getMenuId();

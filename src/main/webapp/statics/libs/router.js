@@ -52,6 +52,17 @@
 
 		window.location.hash = '#' + self.key + addr;
 	};
+	
+	/**
+	 * 重定向（只在iframe页面中元素去操作,浏览器中的url地址栏会改变）
+	 */
+	Router.prototype.forward = function(addr) {
+		var self = this;
+		
+		window.location.hash = '#' + self.key + addr;
+		window.parent.location.href =  addr ;
+//		window.parent.href =  addr ; 地址栏中url不会改变
+	}
 
 	/**
 	 * 重载页面
