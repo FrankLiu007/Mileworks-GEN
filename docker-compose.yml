@@ -1,8 +1,0 @@
-version: '2'
-services:
-  mileworks-gen:
-    image: mileworks/gen
-    ports:
-      - "8080:8080"
-    environment:
-      - spring.profiles.active=dev
