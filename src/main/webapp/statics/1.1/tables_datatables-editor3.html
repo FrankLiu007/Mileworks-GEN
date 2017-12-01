@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<title>AbsoluteAdmin - A Responsive Bootstrap 3 Admin Dashboard
+	Template</title>
+<meta name="keywords"
+	content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+<meta name="description"
+	content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
+<meta name="author" content="AbsoluteAdmin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+<link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/media/css/dataTables.bootstrap.css">
+<link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/media/css/dataTables.plugins.css">
+<link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+
+</head>
+
+<body class="datatables-editor-page" data-spy="scroll"
+	data-target="#nav-spy" data-offset="300">
+	<div id="main">
+		<section id="content" class="table-layout animated fadeIn">
+			<div class="row">
+				<div class="panel panel-visible" id="">
+					<div class="panel-heading">
+						<div class="panel-title hidden-xs">
+							<span class="glyphicon glyphicon-tasks"></span>列表
+						</div>
+					</div>
+					<div class="panel-body pn">
+						<div id="example4_wrapper"
+							class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+							<div class="dt-panelmenu clearfix">
+								<div class="DTTT btn-group">
+									<a class="btn btn-default light btn-sm DTTT_button_text" tabindex="0"><i class="fa fa-plus"></i>&nbsp;<span>新增</span></a>
+									<a class="btn btn-default light btn-sm DTTT_button_text" tabindex="1"><i class="fa fa-pencil-square-o"></i>&nbsp;<span>修改</span></a>
+									<a class="btn btn-default light btn-sm DTTT_button_text" tabindex="2"><i class="fa fa-trash-o"></i>&nbsp;<span>删除</span></a>
+								</div>
+								<div class="dataTables_filter">
+									<input type="search" class="form-control input-sm" placeholder="请输入关键字">
+									<a class="btn btn-default light btn-sm DTTT_button_text"><span>搜索</span></a>
+								</div>
+							</div>
+							<table id="example4" class="table fchild-checkbox dataTable no-footer DTTT_selectable" cellspacing="0" width="100%" role="grid" style="width: 100%;">
+								<thead>
+									<tr role="row">
+										<th class="sorting_disabled" rowspan="1" colspan="1"
+											aria-label="" style="width: 43px;"></th>
+										<th class="sorting_asc" tabindex="0" aria-controls="example4"
+											rowspan="1" colspan="1" aria-sort="ascending"
+											aria-label="Name: activate to sort column descending"
+											style="width: 128px;">Name</th>
+										<th class="sorting" tabindex="0" aria-controls="example4"
+											rowspan="1" colspan="1"
+											aria-label="Position: activate to sort column ascending"
+											style="width: 157px;">Position</th>
+										<th class="sorting" tabindex="0" aria-controls="example4"
+											rowspan="1" colspan="1"
+											aria-label="Office: activate to sort column ascending"
+											style="width: 128px;">Office</th>
+										<th class="sorting" tabindex="0" aria-controls="example4"
+											rowspan="1" colspan="1"
+											aria-label="Start date: activate to sort column ascending"
+											style="width: 184px;">Start date</th>
+										<th class="sorting" tabindex="0" aria-controls="example4"
+											rowspan="1" colspan="1"
+											aria-label="Salary: activate to sort column ascending"
+											style="width: 131px;">Salary</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="odd">
+										<td valign="top" colspan="6" class="dataTables_empty">Loading...</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="dt-panelfooter clearfix">
+								<div class="dataTables_info" id="example4_info" role="status"
+									aria-live="polite">Showing 0 to 0 of 0 entries</div>
+								<div class="dataTables_paginate paging_simple_numbers"
+									id="example4_paginate">
+									<ul class="pagination">
+										<li class="paginate_button previous disabled"
+											aria-controls="example4" tabindex="0" id="example4_previous"><a
+											href="#">Previous</a></li>
+										<li class="paginate_button next disabled"
+											aria-controls="example4" tabindex="0" id="example4_next"><a
+											href="#">Next</a></li>
+									</ul>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+	<script src="vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
+	<script src="vendor/plugins/datatables/media/js/jquery.dataTables.js"></script>
+	<script
+		src="vendor/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+	<script
+		src="vendor/plugins/datatables/extensions/Editor/js/dataTables.editor.js"></script>
+	<script
+		src="vendor/plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+	<script
+		src="vendor/plugins/datatables/extensions/Editor/js/editor.bootstrap.js"></script>
+	<script src="assets/js/utility/utility.js"></script>
+	<script src="assets/js/demo/demo.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<!-- Xedit JS -->
+	<script src="vendor/plugins/moment/moment.min.js"></script>
+	<!-- Dependency -->
+	<script src="vendor/plugins/xeditable/js/bootstrap-editable.min.js"></script>
+	<script src="vendor/plugins/xeditable/inputs/address/address.js"></script>
+	<script
+		src="vendor/plugins/xeditable/inputs/typeaheadjs/lib/typeahead.js"></script>
+	<script
+		src="vendor/plugins/xeditable/inputs/typeaheadjs/typeaheadjs.js"></script>
+
+	<script type="text/javascript">
+  jQuery(document).ready(function() {
+
+    "use strict";
+
+    // Init Theme Core    
+    Core.init();
+
+    // Init Demo JS  
+    Demo.init();
+
+  });
+  </script>
+	<!-- END: PAGE SCRIPTS -->
+
+</body>
+
+</html>

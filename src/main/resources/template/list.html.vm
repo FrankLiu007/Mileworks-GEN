@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>${comments}</title>
+#set($header='<#include  "/inc.html">')
+#set($save='<#if shiro.hasPermission("'+${pathName}+':save")>')
+#set($update='<#if shiro.hasPermission("'+${pathName}+':update")>')
+#set($delete='<#if shiro.hasPermission("'+${pathName}+':delete")>')
+#set($end='</#if>')
+</head>
+<body class="datatables-editor-page" data-spy="scroll" data-target="#nav-spy" data-offset="300">
+<div id="rrapp" v-cloak>
+	<section id="content" class="table-layout animated fadeIn">
+			<div class="row" v-show="showList">
+				<div class="panel panel-visible">
+					<div class="panel-heading">
+						<div class="panel-title hidden-xs">
+							<span class="glyphicon glyphicon-tasks"></span>${comments}列表
+						</div>
+					</div>
+					<div class="panel-body pn">
+						<div id="example4_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+							<div class="dt-panelmenu clearfix">
+								<div class="DTTT btn-group">
+									$save
+						            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+									$end
+									$update
+						            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+									$end
+									$delete
+						            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+									$end
+								</div>
+							</div>
+							<table id="jqGrid" cellspacing="0" cellpadding="0" class="table fchild-checkbox dataTable no-footer DTTT_selectable"></table>
+	    					<div id="jqGridPager"></div>
+	    					
+						</div>
+					</div>
+				</div>
+			</div>
+			<div v-show="!showList" class="panel panel-default">
+				<div class="panel panel-visible">
+					<div class="panel-heading">
+						<div class="panel-title hidden-xs">
+							<span class="glyphicon glyphicon-cog"></span>{{title}}
+						</div>
+					</div>
+					<div class="panel-body pn">
+						<form class="form-horizontal">
+							#foreach($column in $columns)
+							#if($column.columnName != $pk.columnName)
+								<div class="form-group">
+								   	<div class="col-sm-2 control-label">${column.comments}</div>
+								   	<div class="col-sm-10">
+								      <input type="text" class="form-control" v-model="${classname}.${column.attrname}" placeholder="${column.comments}"/>
+								    </div>
+								</div>
+							#end
+							#end
+								<div class="form-group">
+									<div class="col-sm-2 control-label"></div> 
+									<input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+									&nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+								</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+</div>
+
+$header
+<script src="${request.contextPath}/statics/js/modules/generator/${pathName}.js?_${.now?long}"></script>
+</body>
+</html>
