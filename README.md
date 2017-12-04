@@ -37,6 +37,7 @@ mileworks-gen是基于SpringBoot，方便SpringBoot开发者使用，该版本�
 - 添加通过token进行数据交互，token全部自己生成，方便手机端、web端禁用cookies时候使用
 - redis存储的key值是没有序列化的，所以在存储的时候有可能会覆盖，后期全部序列化key和value值
 - swagger2 api文档自动生成：之前都是写死的
+- 添加代码级别监控
 
 <br>
 
