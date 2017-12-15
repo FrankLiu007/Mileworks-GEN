@@ -83,9 +83,9 @@ MileWorks-GEN
 - 执行doc/db.sql文件，初始化数据【按需导入表结构及数据】
 - 修改application-dev.yml，更新MySQL账号和密码
 - Eclipse、IDEA运行MileWorksGenApplication.java，则可启动项目
-- 项目访问路径：http://localhost:8080/mileworks_gen
+- 项目访问路径：http://localhost:8080/mileworks-gen
 - 账号密码：admin/admin
-- swagger文档路径：http://localhost:8080/mileworks_gen/swagger/index.html
+- swagger文档路径：http://localhost:8080/mileworks-gen/swagger/index.html
 
 <br>
 
