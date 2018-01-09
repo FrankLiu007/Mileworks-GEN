@@ -38,13 +38,13 @@ var vm = new Vue({
             })
         },
         add: function(){
-//            vm.showList = false;
-//            vm.title = "新增";
-//            vm.menu = {parentName:null,parentId:0,type:1,orderNum:0};
-//            vm.getMenu();
+            vm.showList = false;
+            vm.title = "新增";
+            vm.menu = {parentName:null,parentId:0,type:1,orderNum:0};
+            vm.getMenu();
         	
-        	var router = new Router();
-        	router.forward(vm.rurl);
+//        	var router = new Router();
+//        	router.forward(vm.rurl);
         	
         },
         update: function () {
