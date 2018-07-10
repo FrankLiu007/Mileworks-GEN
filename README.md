@@ -94,8 +94,3 @@ MileWorks-GEN
 - 需要配置【mileworks.redis.open=true】，表示开启redis缓存
 - 需要配置【mileworks.shiro.redis=true】，表示把shiro session存到redis里
 
-<br>
-
-Spring cloud 教程：http://book.itmuch.com/2%20Spring%20Cloud/2.1.1%20Eureka.html   
-	-- 代码：https://github.com/itmuch/spring-cloud-docker-microservice-book-code
-
